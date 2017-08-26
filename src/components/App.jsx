@@ -45,11 +45,15 @@ class App extends React.Component {
     });
   }
 
+
+
   render() {
     // console.log('current video in app: ', this.state.currentVideo);
     return (
       <div>
-        <Nav />
+        <Nav
+          handleSearchInputChange={this.getYouTubeVideos.bind(this)}
+        />
         <div className="col-md-7">
           <VideoPlayer video={this.state.currentVideo}/>
         </div>
